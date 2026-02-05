@@ -12,7 +12,7 @@
 - get_next_line.c — core logic (reading + stash handling)
 - get_next_line_utils.c — helper string functions
 - get_next_line.h — header and BUFFER_SIZE default
-- main.c — minimal tester (included in this repository)
+- main.c — minimal tester
 
 ## Build
 Default buffer size (42):
@@ -22,11 +22,7 @@ Custom BUFFER_SIZE (example: 1):
 cc -Wall -Wextra -Werror -g -D BUFFER_SIZE=1 main.c get_next_line.c get_next_line_utils.c -o gnl
 
 ## Usage
-1) Create a file named test.txt in the same directory:
-Hello
-World
-
-Last line without newline
+1) Create a file named test.txt in the same directory.
 
 2) Run:
 ./gnl
@@ -37,10 +33,8 @@ Expected behavior:
 - The final line is returned without "\n" if the file does not end with one
 
 ## Notes
-- BUFFER_SIZE can be adjusted by peer evaluators/moulinette, so the implementation must work for small and large values.
+- BUFFER_SIZE can be adjusted, so the implementation must work for small and large values.
 - This project is typically tested on Linux/glibc. If you're on Windows, use WSL/Ubuntu for consistent behavior.
-- Always free() the returned line after use to avoid memory leaks.
 
 ## License
 Educational project (42).
-
